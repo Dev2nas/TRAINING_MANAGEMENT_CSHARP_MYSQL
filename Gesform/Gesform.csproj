@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41FC44CA-96AC-44BE-A18E-7D90E911C5EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gesform</RootNamespace>
+    <AssemblyName>Gesform</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Scaffolding.EntityFramework.12.0, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Data.Entity.Design.Extensibility, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classFormation.cs" />
+    <Compile Include="classLogin.cs" />
+    <Compile Include="classParticipant.cs" />
+    <Compile Include="classSalle.cs" />
+    <Compile Include="classModule.cs" />
+    <Compile Include="classFormateur.cs" />
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="DB_connect.cs" />
+    <Compile Include="Form_formation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_formation.Designer.cs">
+      <DependentUpon>Form_formation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_participant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_participant.Designer.cs">
+      <DependentUpon>Form_participant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion des formations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des formations.Designer.cs">
+      <DependentUpon>Gestion des formations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion des modules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des modules.Designer.cs">
+      <DependentUpon>Gestion des modules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion des formateurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des formateurs.Designer.cs">
+      <DependentUpon>Gestion des formateurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_formateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_formateur.Designer.cs">
+      <DependentUpon>Form_formateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formateurs - Copy.cs" />
+    <Compile Include="Formateurs.cs" />
+    <Compile Include="Form_salles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_salles.Designer.cs">
+      <DependentUpon>Form_salles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion des participants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des participants.Designer.cs">
+      <DependentUpon>Gestion des participants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion des salles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des salles.Designer.cs">
+      <DependentUpon>Gestion des salles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="index.Designer.cs">
+      <DependentUpon>index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_formation.resx">
+      <DependentUpon>Form_formation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_participant.resx">
+      <DependentUpon>Form_participant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion des formations.resx">
+      <DependentUpon>Gestion des formations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion des modules.resx">
+      <DependentUpon>Gestion des modules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion des formateurs.resx">
+      <DependentUpon>Gestion des formateurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_formateur.resx">
+      <DependentUpon>Form_formateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_salles.resx">
+      <DependentUpon>Form_salles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion des participants.resx">
+      <DependentUpon>Gestion des participants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion des salles.resx">
+      <DependentUpon>Gestion des salles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="index.resx">
+      <DependentUpon>index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formateur\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
